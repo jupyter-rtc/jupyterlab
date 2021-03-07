@@ -38,10 +38,11 @@
     "watch": "tsc -b --watch"
   },
   "dependencies": {
-    "@jupyterlab/nbformat": "^3.1.0-alpha.3"
+    "@jupyterlab/nbformat": "^3.1.0-alpha.4",
+    "@lumino/coreutils": "^1.5.3"
   },
   "devDependencies": {
-    "@jupyterlab/testutils": "^3.1.0-alpha.3",
+    "@jupyterlab/testutils": "^3.1.0-alpha.4",
     "@types/jest": "^26.0.10",
     "jest": "^26.4.2",
     "rimraf": "~3.0.0",
