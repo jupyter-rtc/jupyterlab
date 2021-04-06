@@ -439,6 +439,9 @@ function ensureBuildUtils() {
  * Ensure the repo integrity.
  */
 export async function ensureIntegrity(): Promise<boolean> {
+  // Handle buildutils
+  ensureBuildUtils();
+
   const messages: Dict<string[]> = {};
 
   // Pick up all the package versions.
@@ -597,9 +600,6 @@ export async function ensureIntegrity(): Promise<boolean> {
       return { path: './' + path.relative('.', pth) };
     });
   utils.writeJSONFile(tsConfigdocPath, tsConfigdocData);
-
-  // Handle buildutils
-  ensureBuildUtils();
 
   // Handle the JupyterLab application top package.
   pkgMessages = ensureJupyterlab();
